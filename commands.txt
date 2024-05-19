@@ -1,0 +1,12 @@
+#commans used
+vi Dockerfile 
+vi index.html
+docker build -t literallyshiva/custom-nginx:latest .
+docker login
+docker tag custom-nginx:latest yliterallyshiva/custom-nginx:latest
+docker push literallyshiva/custom-nginx:latest
+
+vi docker-compose.yml
+mkdir -p ./nginx-data
+docker-compose up -d
+
